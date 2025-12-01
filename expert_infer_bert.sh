@@ -1,16 +1,16 @@
-export GLUE_DIR=/path/to/glue_data
+export GLUE_DIR=./Data
 
 MODEL_TYPE=bert  # bert or albert
 MODEL_SIZE=large 
 TASK=CoLA
 
-python3 ./run_glue.py \
-  --model_type bert \
-  --model_name_or_path /home/divya/PABEE/saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK} \
+uv run run_train.py \
+  --model_type ${MODEL_TYPE} \
+  --model_name_or_path ./saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK} \
   --task_name ${TASK} \
   --do_eval \
   --do_lower_case \
-  --data_dir "/home/divya/PABEE/Data/${TASK}" \
+  --data_dir "${GLUE_DIR}/${TASK}" \
   --max_seq_length 128 \
   --per_gpu_train_batch_size 32 \
   --per_gpu_eval_batch_size 1 \
@@ -18,8 +18,8 @@ python3 ./run_glue.py \
   --save_steps 2 \
   --logging_steps 2 \
   --num_train_epochs 15 \
-  --model_name_or_path /home/divya/PABEE/saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK} \
-  --output_dir /home/divya/PABEE/saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK} \
+  --model_name_or_path ./saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK} \
+  --output_dir ./saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK} \
   --overwrite_output_dir \
   --overwrite_cache \
   --eval_all_checkpoints \

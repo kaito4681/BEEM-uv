@@ -1,10 +1,10 @@
-export GLUE_DIR=/home/divya/PABEE/Data/
+export GLUE_DIR=./Data/
 TASK_NAME=CoLA
 MODEL_TYPE=bert  # bert or albert
 MODEL_SIZE=large
 
 
-python3 ./run_train.py \
+uv run run_train.py \
   --model_type $MODEL_TYPE \
   --model_name_or_path ${MODEL_TYPE}-${MODEL_SIZE}-uncased \
   --task_name $TASK_NAME \
@@ -19,7 +19,7 @@ python3 ./run_train.py \
   --save_steps 300 \
   --logging_steps 300 \
   --num_train_epochs 8 \
-  --output_dir /home/divya/PABEE/saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK_NAME} \
+  --output_dir ./saved_models/${MODEL_TYPE}-${MODEL_SIZE}/${TASK_NAME} \
   --overwrite_output_dir \
   --overwrite_cache \
   --evaluate_during_training
