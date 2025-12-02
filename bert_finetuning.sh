@@ -1,4 +1,4 @@
-export GLUE_DIR=./Data/
+export GLUE_DIR=./data/
 TASK_NAME=CoLA
 MODEL_TYPE=bert  # bert or albert
 MODEL_SIZE=large

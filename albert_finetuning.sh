@@ -1,4 +1,4 @@
-export GLUE_DIR=./Data/
+export GLUE_DIR=./data/
 TASK_NAME=MRPC
 MODEL_TYPE=albert  # bert or albert
 MODEL_SIZE=large

@@ -1,0 +1,1 @@
+uv run python download_glue_data.py --data_dir data --tasks all

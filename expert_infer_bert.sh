@@ -1,4 +1,4 @@
-export GLUE_DIR=./Data
+export GLUE_DIR=./data
 
 MODEL_TYPE=bert  # bert or albert
 MODEL_SIZE=large 
