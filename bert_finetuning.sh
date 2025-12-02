@@ -1,5 +1,5 @@
 export GLUE_DIR=./data/
-TASK_NAME=CoLA
+TASK_NAME=MRPC
 MODEL_TYPE=bert  # bert or albert
 MODEL_SIZE=large
 

@@ -1,8 +1,8 @@
 export GLUE_DIR=./data
 
 MODEL_TYPE=albert  # bert or albert
-MODEL_SIZE=base 
-TASK=SST-2
+MODEL_SIZE=large
+TASK=MRPC
 
 uv run run_train.py \
   --model_type ${MODEL_TYPE} \
